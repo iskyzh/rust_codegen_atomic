@@ -3,6 +3,7 @@
 use core::sync::atomic::AtomicBool;
 use core::sync::atomic::Ordering;
 
+#[no_mangle]
 fn test_atomic() {
     let x = AtomicBool::new(false);
     x.compare_and_swap(false, false, Ordering::Acquire);
